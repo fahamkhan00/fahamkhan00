@@ -71,8 +71,8 @@ got(url, { prefixUrl: WEATHER_DOMAIN })
     const degF = Math.round(json.DailyForecasts[0].Temperature.Maximum.Value)
     const degC = Math.round(Qty(`${degF} tempF`).to('tempC').scalar)
     const icon = json.DailyForecasts[0].Day.Icon
-    const latestProject= "myDocker Project"
-
+    const latestProject= "DockerApp"
+    const latestGit="DockerApp"
     fs.readFile('template.svg', 'utf-8', (error, data) => {
       if (error) {
         console.error("Error reading SVG template:", error);
@@ -86,7 +86,8 @@ got(url, { prefixUrl: WEATHER_DOMAIN })
       data = data.replace('{todayDay}', todayDay)
       data = data.replace('{dayBubbleWidth}', dayBubbleWidths[todayDay])
       data = data.replace('{latestProject}',latestProject)
-    
+      data = data.replace('{latestGit}',latestGit)
+
       data = fs.writeFile('chat.svg', data, (err) => {
         if (err) {
           console.error("Error writing SVG file:", err);
