@@ -72,7 +72,7 @@ got(url, { prefixUrl: WEATHER_DOMAIN })
     const degC = Math.round(Qty(`${degF} tempF`).to('tempC').scalar)
     const icon = json.DailyForecasts[0].Day.Icon
     const latestProject= "DockerApp"
-    const latestGit="DockerApa"
+    const latestGit="DockerApp"
     fs.readFile('template.svg', 'utf-8', (error, data) => {
       if (error) {
         console.error("Error reading SVG template:", error);
