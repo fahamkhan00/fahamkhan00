@@ -37,7 +37,7 @@ jobs:
         with:
           # The user that will author the commit
           author_name: Faham Khan
-          author_email: fahamkhan11@gmail.com
+          author_email: faham@student.iul.ac.in
           
           # The commit message
           message: "docs: auto-update readme"
