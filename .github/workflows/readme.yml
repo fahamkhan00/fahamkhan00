@@ -3,7 +3,7 @@ name: Update readme
 on:
   schedule:
     # Runs at 22:30 UTC every day
-    - cron: "30 22 * * *"
+    - cron: "30 01 * * *"
   workflow_dispatch:
 
 jobs:
